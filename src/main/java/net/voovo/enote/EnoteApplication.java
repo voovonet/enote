@@ -14,6 +14,6 @@ public class EnoteApplication implements EmbeddedServletContainerCustomizer {
 	
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
-		container.setPort(8081);
+		container.setPort(8080);
 	}
 }
