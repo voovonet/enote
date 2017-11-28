@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="net.voovo.enote.mapper.CommentMapper">
+
+	<!-- common definitions -->
+	<sql id="query_count">SELECT COUNT(*)</sql>
+	<sql id="query_fields">SELECT *</sql>
+	<sql id="comment_query_conditions">
+    	FROM comment 
+        <if test="id!=null">AND id = #{id}</if>
+        <if test="comment!=null" >AND comment = #{comment}</if>
+    </sql>
+
+    <select id="getComments" parameterType="hashmap" resultType="net.voovo.enote.entity.Comment">
+        <include refid="query_fields"/>
+		<include refid="comment_query_conditions"/>
+    </select>
+   
+    <insert id="insertOne" parameterType="net.voovo.enote.entity.Comment">
+      
+    </insert>
+    
+    <update id="updateOne" parameterType="net.voovo.enote.entity.Comment">
+        
+    </update>
+    
+    <!-- hash -->
+    <select id="getCommentInfoCount" parameterType="hashmap" resultType="java.lang.Integer">
+    	<include refid="query_count"/>
+    	<include refid="comment_query_conditions" />
+    </select>
+    
+    <!-- Object -->
+    <select id="getCommentCount" parameterType="net.voovo.enote.entity.Comment" resultType="java.lang.Integer">
+        <include refid="query_count"/>
+    	<include refid="comment_query_conditions" />
+    </select>
+</mapper>
