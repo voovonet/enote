@@ -1,8 +1,12 @@
 package net.voovo.enote.entity;
 
+import javax.validation.constraints.NotNull;
+
 public class Comment {
 
+	@NotNull
 	private String id;
+	
 	private String text;
 	
 	public String getId() {

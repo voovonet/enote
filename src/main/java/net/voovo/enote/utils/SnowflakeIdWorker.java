@@ -1,4 +1,4 @@
-﻿package net.voovo.enote.utils;
+package net.voovo.enote.utils;
 
 /**
  * Twitter_Snowflake<br>

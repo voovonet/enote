@@ -1,4 +1,4 @@
-﻿package net.voovo.enote.utils;
+package net.voovo.enote.utils;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
