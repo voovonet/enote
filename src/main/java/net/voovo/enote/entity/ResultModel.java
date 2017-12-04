@@ -12,8 +12,6 @@ import net.voovo.enote.exception.UpmsExceptionEnum;
 
 /**
  * 通用返回对象
- * @author Levin
- *
  */
 public class ResultModel extends HashMap<String, Object> implements Serializable{
 

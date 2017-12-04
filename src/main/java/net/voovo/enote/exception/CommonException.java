@@ -1,9 +1,6 @@
 package net.voovo.enote.exception;
 
 /**
- * 
- * @author Levin,2017年5月17日
- *
  */
 public class CommonException extends BusinessException {
 	private static final long serialVersionUID = -5977333208013131624L;
