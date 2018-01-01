@@ -23,4 +23,5 @@ public class CommentService {
 		
 		return mapper.getComments(cond);
 	}
+	
 }

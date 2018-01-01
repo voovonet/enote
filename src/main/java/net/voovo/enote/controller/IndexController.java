@@ -36,9 +36,9 @@ public class IndexController {
 	}
 	
 	@RequestMapping("/addComment")
-	public String addComment() {
+	public ModelAndView addComment() {
 		String id = Long.toString(new SnowflakeIdWorker(0,0).nextId());//生成id
 		System.out.println(id);
-		return "";
+		return new ModelAndView("/addComment");
 	}
 }
